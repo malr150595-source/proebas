@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Scalar.AspNetCore;
 using System.Text;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -143,6 +144,12 @@ builder.Services.AddCors(po =>
         .AllowAnyHeader();
     });
 });
+
+// =========================================================================
+// 3. CONFIGURACIÓN DE REDIS (Bloqueos en Memoria)
+// =========================================================================
+var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
+builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnectionString!));
 
 var app = builder.Build();
 

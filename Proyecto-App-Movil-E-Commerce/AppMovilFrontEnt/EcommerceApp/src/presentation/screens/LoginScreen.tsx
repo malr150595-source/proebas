@@ -1,82 +1,119 @@
-// @ts-nocheck
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, ActivityIndicator, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useAuth } from '../hooks/useAuth';
+import React, { useState } from 'react';
+import { View, Text, KeyboardAvoidingView, Platform, Alert } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context'; 
+import { Ionicons } from '@expo/vector-icons';
+import { Link, useRouter } from 'expo-router'; 
+import { CustomInput } from '../components/CustomInput';
+import { PrimaryButton } from '../components/PrimaryButton';
 
 export const LoginScreen = () => {
-  const {
-    userName,
-    setUserName,
-    password,
-    setPassword,
-    isLoading,
-    errorMsg,
-    handleLogin
-  } = useAuth();
+  const router = useRouter(); 
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleLogin = async () => {
+    if (!username || !password) {
+      Alert.alert('Datos incompletos', 'Por favor ingresa tu usuario y contraseña.');
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      // Simulación de espera de red (1.5 segundos)
+      await new Promise(resolve => setTimeout(resolve, 1500)); 
+
+      // CREDENCIALES DE PRUEBA (Simulación local)
+      const USER_TEST = "admin@test.com";
+      const PASS_TEST = "Admin123!";
+
+      // CORRECCIÓN: Limpieza rigurosa de espacios y conversión a minúsculas
+      const cleanUsername = username.trim().toLowerCase();
+      const cleanPassword = password.trim();
+
+      if (cleanUsername === USER_TEST && cleanPassword === PASS_TEST) {
+        console.log('Login simulado con éxito');
+        
+        // CORRECCIÓN: Ruta exacta sin paréntesis vinculada a tu products.tsx
+        router.replace('/products'); 
+      } else {
+        // Mensaje de error detallado por si hay fallas en la escritura
+        Alert.alert(
+          'Credenciales incorrectas', 
+          'Para la prueba usa exactamente:\nUsuario: admin@test.com\nContraseña: Admin123!'
+        );
+      }
+
+    } catch (error: any) {
+      Alert.alert('Error', error.message || 'Error al iniciar sesión');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
-    <SafeAreaView className="flex-1 bg-gray-900 justify-center px-6">
-      <View className="items-center mb-10">
-        {/* Placeholder para tu Logo */}
-        <View className="w-24 h-24 bg-gray-800 rounded-full items-center justify-center mb-4 border border-gray-700">
-           <Text className="text-blue-500 font-bold text-3xl">E-C</Text>
+    <SafeAreaView className="flex-1 bg-[#0b1221]">
+      <KeyboardAvoidingView 
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        className="flex-1 justify-center items-center px-6"
+      >
+        <View className="w-full bg-[#162032]/80 border border-[#233045] rounded-3xl p-8 py-12">
+          
+          {/* Cabecera / Logo */}
+          <View className="items-center mb-10">
+            <View className="mb-4">
+              <Ionicons name="shield-checkmark-outline" size={48} color="#2CB1F6" />
+            </View>
+            <Text className="text-white text-3xl font-bold mb-2">Ecommerce</Text>
+            <Text className="text-[#8ba0b2] text-sm text-center">
+              Ingresa al Sistema de Comercio Seguro
+            </Text>
+          </View>
+
+          {/* Formulario usando Componentes Reutilizables */}
+          <View>
+            <CustomInput
+              iconName="person-outline"
+              placeholder="Nombre de usuario o correo"
+              value={username}
+              onChangeText={setUsername}
+              autoCapitalize="none"
+              editable={!isLoading}
+            />
+
+            <CustomInput
+              iconName="lock-closed-outline"
+              placeholder="Contraseña"
+              value={password}
+              onChangeText={setPassword}
+              isPassword={true}
+              showPassword={showPassword}
+              onTogglePassword={() => setShowPassword(!showPassword)}
+              editable={!isLoading}
+            />
+
+            <View className="mt-4">
+              <PrimaryButton
+                title="Iniciar Sesión"
+                iconName="arrow-forward"
+                onPress={handleLogin}
+                isLoading={isLoading}
+              />
+            </View>
+            
+            {/* Enlace para ir al Registro */}
+            <View className="mt-8 flex-row justify-center">
+              <Text className="text-[#8ba0b2]">¿No tienes cuenta? </Text>
+              <Link href="/register" className="text-[#2CB1F6] font-bold">
+                Regístrate aquí
+              </Link>
+            </View>
+            
+          </View>
+
         </View>
-        <Text className="text-white text-3xl font-extrabold tracking-tight">Bienvenido</Text>
-        <Text className="text-gray-400 mt-2 text-sm">Inicia sesión en tu cuenta para continuar</Text>
-      </View>
-
-      <View className="w-full">
-        {/* Input Usuario */}
-        <View className="mb-4">
-          <Text className="text-gray-300 font-medium mb-2 ml-1">Usuario o Correo</Text>
-          <TextInput
-            className="w-full bg-gray-800 text-white px-4 py-4 rounded-xl border border-gray-700 focus:border-blue-500"
-            placeholder="Ej. Eduardo o eduardo@mail.com"
-            placeholderTextColor="#9ca3af"
-            value={userName}
-            onChangeText={setUserName}
-            autoCapitalize="none"
-            editable={!isLoading}
-          />
-        </View>
-
-        {/* Input Contraseña */}
-        <View className="mb-6">
-          <Text className="text-gray-300 font-medium mb-2 ml-1">Contraseña</Text>
-          <TextInput
-            className="w-full bg-gray-800 text-white px-4 py-4 rounded-xl border border-gray-700 focus:border-blue-500"
-            placeholder="********"
-            placeholderTextColor="#9ca3af"
-            secureTextEntry
-            value={password}
-            onChangeText={setPassword}
-            editable={!isLoading}
-          />
-        </View>
-
-        {/* Mensaje de Error */}
-        {errorMsg && (
-          <Text className="text-red-400 text-center mb-4 font-medium">
-            {errorMsg}
-          </Text>
-        )}
-
-        {/* Botón Principal Azul */}
-        <TouchableOpacity
-          className={`w-full py-4 rounded-xl items-center flex-row justify-center ${isLoading ? 'bg-blue-800' : 'bg-blue-600'}`}
-          onPress={handleLogin}
-          disabled={isLoading}
-          activeOpacity={0.8}
-        >
-          {isLoading ? (
-            <ActivityIndicator color="#ffffff" size="small" className="mr-2" />
-          ) : null}
-          <Text className="text-white font-bold text-lg">
-            {isLoading ? 'Verificando...' : 'Iniciar Sesión'}
-          </Text>
-        </TouchableOpacity>
-      </View>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
