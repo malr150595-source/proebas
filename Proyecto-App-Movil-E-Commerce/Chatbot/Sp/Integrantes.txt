@@ -1,0 +1,6 @@
+Procedimiento almacenado de fintracion dinamica de la base de datos EcommerceAgent conectando con web sockets y haciendo pruebas en postman
+
+1. Eduardo Josué Davila Zepeda    carnet
+2. Darwin Fulgencio Lopez Cuadra. carnet: 211585
+3. William Alfredo Artola Lopez.  carnet: 154089
+4. Jimmy Macdiel Martínez Garcia  carnet: 201015

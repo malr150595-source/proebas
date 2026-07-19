@@ -1,0 +1,408 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+app/__init__.py
+app/domain/entities/conversation.py
+app/infraestructure/__init__.py
+app/infraestructure/conversation_repository.py
+app/infraestructure/db/sql_server_repository.py
+app/infraestructure/llm_service.py
+app/presentation/__init__.py
+app/presentation/chat_controller.py
+app/presentation/websocket_controller.py
+app/use_cases/__init__.py
+app/use_cases/procesar_coversacion.py
+app/use_cases/process_message_use_case.py
+app/use_cases/start_conversation.py
+main.py
+requierements.txt
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="app/__init__.py">
+
+</file>
+
+<file path="app/domain/entities/conversation.py">
+# app/domain/entities/conversation.py (Extensión)
+from pydantic import BaseModel, Field
+from typing import Optional, List
+
+class ProductoCatalogoDTO(BaseModel):
+    id_variante: int
+    categoria: str
+    subcategoria: str
+    segmento: str
+    nombre_producto: str
+    variante: str
+    precio: float
+    stock: Optional[int] = 0
+    cantidad: Optional[int] = 0
+
+class RespuestaBot(BaseModel):
+    conversation_id: str
+    emisor: str = "bot"
+    regla_id: Optional[int] = None
+    nombre_regla: Optional[str] = None
+    Intent: str
+    mensaje: str
+    catalogo_productos: List[ProductoCatalogoDTO] = []
+    requiere_confirmacion: bool = False
+    escalado_humano: bool = False
+</file>
+
+<file path="app/infraestructure/__init__.py">
+
+</file>
+
+<file path="app/infraestructure/conversation_repository.py">
+# app/infraestructure/conversation_repository.py
+from abc import ABC, abstractmethod
+from typing import Dict, Any, List, Optional
+
+class IConversationRepository(ABC):
+    
+    @abstractmethod
+    def db_connection(self): # 👈 ASEGÚRATE DE QUE ESTO EXISTA AQUÍ
+        pass
+
+    @abstractmethod
+    def orquestar_conversacion(self, username: str) -> int:
+        pass
+
+    @abstractmethod
+    def orquestar_y_procesar_mensaje(self, username: str, mensaje_usuario: str) -> dict:
+        pass
+
+    @abstractmethod
+    def ejecutar_agregar_carrito_v2(self, username: str, termino_busqueda: str, conv_id: int, cantidad: int = 1) -> dict:
+        pass
+
+    @abstractmethod
+    def orquestar_y_procesar_mensaje_v2(self, username: str, mensaje_usuario: str, conv_id: int) -> dict:
+        pass
+
+    @abstractmethod
+    def verificar_carrito_compras(self, username: str) -> dict:
+        pass
+
+    @abstractmethod
+    def registrar_mensaje_historial(self, conv_id: int, chatbot: int, texto: str, regla_id: Optional[int] = None, metadata: Optional[str] = None) -> None:
+        pass
+
+    @abstractmethod
+    def obtener_stopwords_carrito(self) -> List[str]:
+        pass
+        
+    # 💡 Nuevo método obligatorio: Extrae categorías, marcas y sinónimos de la BD
+    @abstractmethod
+    def obtener_diccionario_palabras(self) -> List[str]:
+        pass
+
+    @abstractmethod
+    def obtener_stopwords(self, tipo: str) -> list:
+        pass
+        
+    @abstractmethod
+    def obtener_sinonimos(self) -> dict:
+        pass
+</file>
+
+<file path="app/infraestructure/db/sql_server_repository.py">
+# app/infrastructure/conversation_repository.py
+import json
+import pyodbc
+import os
+from contextlib import contextmanager
+
+class SQLServerConversationRepository:
+    def __init__(self):
+        # 1. Extraemos los parámetros individuales del .env que proporcionaste
+        driver = os.getenv("DB_DRIVER", "{ODBC Driver 17 for SQL Server}")
+        server = os.getenv("DB_SERVER", "localhost")
+        database = os.getenv("DB_DATABASE", "DB_EcommerceAgent")
+        username = os.getenv("DB_USER", "user_agent_db")
+        password = os.getenv("DB_PASSWORD", "Marianne2502")
+
+        # 2. Construimos la cadena de conexión dinámica limpia
+        self.connection_string = (
+            f"DRIVER={driver};"
+            f"SERVER={server};"
+            f"DATABASE={database};"
+            f"UID={username};"
+            f"PWD={password};"
+            f"Encrypt=no;" # Vital si estás en desarrollo local sin certificados SSL configurados
+        )
+
+    @contextmanager
+    def db_connection(self):
+        conn = pyodbc.connect(self.connection_string)
+        try:
+            yield conn
+        finally:
+            conn.close()
+
+    def procesar_mensaje_chatbot(self, username: str, message: str) -> dict:
+        """
+        Llama al SP centralizado USP_ORQUESTAR_Y_PROCESAR_CHAT.
+        Este gestionará secuencialmente: Saludo, Búsqueda, Adición y Verificación.
+        """
+        try:
+            with self.db_connection() as conn:
+                with conn.cursor() as cursor:
+                    # Estructura JSON exacta requerida por tu orquestador T-SQL
+                    payload_json = json.dumps({
+                        "username": username,
+                        "message": message
+                    }, ensure_ascii=False)
+
+                    # Invocación directa
+                    query = "EXEC [dbo].[USP_ORQUESTAR_Y_PROCESAR_CHAT] @p_ChatRequestJson = ?"
+                    cursor.execute(query, (payload_json,))
+                    row = cursor.fetchone()
+
+                    if row and row[0]:
+                        return json.loads(row[0])
+                    
+                    return self._generar_fallback_local("FALLBACK_EMPTY", "El motor de base de datos no retornó información.")
+
+        except Exception as e:
+            return self._generar_fallback_local("FALLBACK_CRITICAL", f"Error de comunicación con SQL Server: {str(e)}")
+
+    def _generar_fallback_local(self, intent: str, mensaje: str) -> dict:
+        return {
+            "conversation_id": "0",
+            "emisor": "bot",
+            "regla_id": 0,
+            "nombre_regla": "FALLBACK",
+            "Intent": intent,
+            "mensaje": mensaje,
+            "catalogo_productos": [],
+            "requiere_confirmacion": False,
+            "escalado_humano": False
+        }
+</file>
+
+<file path="app/infraestructure/llm_service.py">
+# app/infraestructure/llm_service.py
+
+class LLMHumanizerService:
+    def __init__(self):
+        """
+        Constructor limpio. 
+        Ya no se inicializa ningún cliente de Google ni se validan API Keys.
+        """
+        pass
+
+    def humanizar_respuesta(self, username: str, mensaje_usuario: str, intencion: str, respuesta_sql: str, catalogo_json: list, historial: list = None) -> str:
+        """
+        Bypass directo: Ya no llama a ninguna IA. 
+        Retorna de inmediato el mensaje sugerido y estructurado por la base de datos.
+        """
+        # Devolvemos directamente el mensaje que viene de tu SQL Server
+        return respuesta_sql
+</file>
+
+<file path="app/presentation/__init__.py">
+
+</file>
+
+<file path="app/presentation/chat_controller.py">
+# app/presentation/chat_controller.py
+from fastapi import APIRouter, HTTPException, Depends
+from app.infraestructure.db.sql_server_repository import SQLServerConversationRepository
+from app.use_cases.start_conversation import StartConversationUseCase
+from pydantic import BaseModel
+
+router = APIRouter(prefix="/chat", tags=["Chatbot"])
+
+def get_repository():
+    return SQLServerConversationRepository()
+
+class StartChatDTO(BaseModel):
+    username: str
+
+@router.post("/start")
+def iniciar_conversacion(dto: StartChatDTO, repo=Depends(get_repository)):
+    try:
+        use_case = StartConversationUseCase(repo)
+        conversation_id = use_case.execute(dto.username)
+        
+        return {
+            "status": "SUCCESS",
+            "message": "Conversación inicializada correctamente.",
+            "conversation_id": str(conversation_id)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+</file>
+
+<file path="app/presentation/websocket_controller.py">
+# app/presentation/websocket_controller.py
+from fastapi import APIRouter, WebSocket, WebSocketDisconnect
+from app.infraestructure.db.sql_server_repository import SQLServerConversationRepository
+from app.use_cases.process_message_use_case import ProcessMessageUseCase
+
+router = APIRouter()
+
+# Instanciamos los componentes mapeados con el repositorio limpio
+repository = SQLServerConversationRepository()
+process_use_case = ProcessMessageUseCase(repository)
+
+@router.websocket("/ws/chat")
+async def websocket_chat_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            # 1. Recibir petición en formato JSON desde React Native / Postman
+            data = await websocket.receive_json()
+            
+            username = data.get("username", "Anónimo").strip()
+            message = data.get("message", "").strip()
+
+            # 2. Ejecutar lógica pasando por el Caso de Uso hacia el SP orquestador
+            response_payload = process_use_case.execute(username, message)
+
+            # 3. Retornar respuesta inmediata en tiempo real por el canal WebSocket
+            await websocket.send_json(response_payload)
+
+    except WebSocketDisconnect:
+        pass
+    except Exception as e:
+        try:
+            await websocket.send_json({
+                "Intent": "ERROR_WS",
+                "mensaje": f"Excepción en el canal de datos: {str(e)}"
+            })
+        except:
+            pass
+</file>
+
+<file path="app/use_cases/__init__.py">
+
+</file>
+
+<file path="app/use_cases/procesar_coversacion.py">
+# app/use_cases/procesar_conversacion.py
+from app.infraestructure.conversation_repository import IConversationRepository
+from app.domain.entities.conversation import ChatMessageDTO
+
+class ProcesarConversacionUseCase: 
+    def __init__(self, repository: IConversationRepository): 
+        self.repository = repository
+
+    def ejecutar(self, conv_id: int, chat_message: ChatMessageDTO) -> None: 
+        self.repository.registrar_mensaje_historial(
+            conv_id=conv_id, 
+            chatbot=0, 
+            texto=chat_message.message
+        )
+</file>
+
+<file path="app/use_cases/process_message_use_case.py">
+# app/use_cases/process_message_use_case.py
+from app.infraestructure.db.sql_server_repository import SQLServerConversationRepository
+
+class ProcessMessageUseCase:
+    def __init__(self, repository: SQLServerConversationRepository):
+        self.repository = repository
+
+    def execute(self, username: str, message: str) -> dict:
+        if not message or message.strip() == "":
+            return self.repository._generar_fallback_local("BAD_REQUEST", "El mensaje no puede estar vacío.")
+            
+        return self.repository.procesar_mensaje_chatbot(username, message)
+</file>
+
+<file path="app/use_cases/start_conversation.py">
+# app/use_cases/start_conversation.py
+from app.infraestructure.conversation_repository import IConversationRepository
+
+class StartConversationUseCase:
+    def __init__(self, repository: IConversationRepository):
+        self.repository = repository
+
+    def execute(self, username: str) -> int:
+        return self.repository.orquestar_conversacion(username)
+</file>
+
+<file path="main.py">
+# main.py
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.presentation.websocket_controller import router as ws_router
+from dotenv import load_dotenv
+
+load_dotenv()
+
+app = FastAPI(
+    title="E-commerce Chatbot Agent API", 
+    version="2.0.0"
+)
+
+# Configuración de CORS vital para conexiones WebSocket desde dispositivos físicos/emuladores
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Registramos el endpoint del Chatbot
+app.include_router(ws_router)
+
+@app.get("/")
+def read_root():
+    return {"status": "ONLINE", "bot_features": ["saludar", "buscar_productos", "agregar_carrito", "verificar_carrito"]}
+</file>
+
+<file path="requierements.txt">
+fastapi==0.111.0
+uvicorn==0.30.1
+pyodbc==5.1.0
+pydantic==2.7.4
+</file>
+
+</files>

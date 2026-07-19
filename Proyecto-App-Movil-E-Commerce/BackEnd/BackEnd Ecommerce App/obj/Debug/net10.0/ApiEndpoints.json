@@ -1,0 +1,2678 @@
+[
+  {
+    "ContainingType": "WebApi.Controllers.AttributeProductVariablesController",
+    "Method": "DeleteAttributeProductVariable",
+    "RelativePath": "api/AttributeProductVariables/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.AttributeProductVariable_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.AttributeProductVariablesController",
+    "Method": "FilterAttributeProductVariables",
+    "RelativePath": "api/AttributeProductVariables/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.AttributeProductVariable, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.AttributeProductVariablesController",
+    "Method": "InsertAttributeProductVariable",
+    "RelativePath": "api/AttributeProductVariables/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.AttributeProductVariable_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.AttributeProductVariablesController",
+    "Method": "ListAttributeProductVariables",
+    "RelativePath": "api/AttributeProductVariables/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.AttributeProductVariable, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.AttributeProductVariablesController",
+    "Method": "UpdateAttributeProductVariable",
+    "RelativePath": "api/AttributeProductVariables/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.AttributeProductVariable_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_Ecommerce_App.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "Application.DTOs.Login_DTOs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartDetailsController",
+    "Method": "DeleteCartDetail",
+    "RelativePath": "api/CartDetails/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.CartDetail_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartDetailsController",
+    "Method": "FilterCartDetails",
+    "RelativePath": "api/CartDetails/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.CartDetail, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartDetailsController",
+    "Method": "InsertCartDetail",
+    "RelativePath": "api/CartDetails/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.CartDetail_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartDetailsController",
+    "Method": "ListCartDetails",
+    "RelativePath": "api/CartDetails/List/{cartId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.CartDetail, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartDetailsController",
+    "Method": "UpdateCartDetail",
+    "RelativePath": "api/CartDetails/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.CartDetail_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartsController",
+    "Method": "DeleteCart",
+    "RelativePath": "api/Carts/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.Cart_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartsController",
+    "Method": "FilterCarts",
+    "RelativePath": "api/Carts/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Cart, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartsController",
+    "Method": "InsertCart",
+    "RelativePath": "api/Carts/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.Cart_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartsController",
+    "Method": "ListCarts",
+    "RelativePath": "api/Carts/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Cart, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CartsController",
+    "Method": "UpdateCart",
+    "RelativePath": "api/Carts/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.Cart_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CategoriesController",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/Categories/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteCategory",
+        "Type": "Application.DTOs.Category_DTOs\u002BCategory_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CategoriesController",
+    "Method": "FilterCategories",
+    "RelativePath": "api/Categories/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "criterio",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Category, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CategoriesController",
+    "Method": "InsertCategory",
+    "RelativePath": "api/Categories/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createCategory",
+        "Type": "Application.DTOs.Category_DTOs\u002BCategory_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CategoriesController",
+    "Method": "ListCategories",
+    "RelativePath": "api/Categories/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Category, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CategoriesController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/Categories/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateCategory",
+        "Type": "Application.DTOs.Category_DTOs\u002BCategory_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.MarksController",
+    "Method": "DeleteMark",
+    "RelativePath": "api/Marks/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteMark",
+        "Type": "Application.DTOs.Mark_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.MarksController",
+    "Method": "FilterMarks",
+    "RelativePath": "api/Marks/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Mark, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.MarksController",
+    "Method": "InsertMark",
+    "RelativePath": "api/Marks/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createMark",
+        "Type": "Application.DTOs.Mark_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.MarksController",
+    "Method": "ListMarks",
+    "RelativePath": "api/Marks/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Mark, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.MarksController",
+    "Method": "UpdateMark",
+    "RelativePath": "api/Marks/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateMark",
+        "Type": "Application.DTOs.Mark_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentMethodTypesController",
+    "Method": "DeletePaymentMethodType",
+    "RelativePath": "api/PaymentMethodTypes/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.PaymentMethodType_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentMethodTypesController",
+    "Method": "FilterPaymentMethodTypes",
+    "RelativePath": "api/PaymentMethodTypes/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.PaymentMethodType, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentMethodTypesController",
+    "Method": "InsertPaymentMethodType",
+    "RelativePath": "api/PaymentMethodTypes/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.PaymentMethodType_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentMethodTypesController",
+    "Method": "ListPaymentMethodTypes",
+    "RelativePath": "api/PaymentMethodTypes/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.PaymentMethodType, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentMethodTypesController",
+    "Method": "UpdatePaymentMethodType",
+    "RelativePath": "api/PaymentMethodTypes/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.PaymentMethodType_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrderDetailsController",
+    "Method": "DeletePaymentOrderDetail",
+    "RelativePath": "api/PaymentOrderDetails/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.PaymentOrderDetail_DTOs\u002BPaymentOrderDetail_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrderDetailsController",
+    "Method": "FilterPaymentOrderDetails",
+    "RelativePath": "api/PaymentOrderDetails/Filter/{filt}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filt",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.PaymentOrderDetail, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrderDetailsController",
+    "Method": "InsertPaymentOrderDetail",
+    "RelativePath": "api/PaymentOrderDetails/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.PaymentOrderDetail_DTOs\u002BPaymentOrderDetail_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrderDetailsController",
+    "Method": "ListPaymentOrderDetails",
+    "RelativePath": "api/PaymentOrderDetails/List/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.PaymentOrderDetail, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrderDetailsController",
+    "Method": "UpdatePaymentOrderDetail",
+    "RelativePath": "api/PaymentOrderDetails/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.PaymentOrderDetail_DTOs\u002BPaymentOrderDetail_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrdersController",
+    "Method": "FilterPaymentOrder",
+    "RelativePath": "api/PaymentOrders/Filter/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Domain.PaymentOrder",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrdersController",
+    "Method": "InsertPaymentOrder",
+    "RelativePath": "api/PaymentOrders/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.PaymentOrder_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrdersController",
+    "Method": "ListPaymentOrders",
+    "RelativePath": "api/PaymentOrders/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderUserId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.PaymentOrder, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrdersController",
+    "Method": "UpdatePaymentOrder",
+    "RelativePath": "api/PaymentOrders/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.PaymentOrder_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentOrdersController",
+    "Method": "UpdateOrderStatus",
+    "RelativePath": "api/PaymentOrders/UpdateStatus",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateStatusDto",
+        "Type": "Application.DTOs.PaymentOrder_UpdateStatus_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PermissionsController",
+    "Method": "AssignPermissionToRole",
+    "RelativePath": "api/Permissions/Assign",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assignDto",
+        "Type": "Application.DTOs.RolePermission_Assign_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PermissionsController",
+    "Method": "ListPermissionsByRole",
+    "RelativePath": "api/Permissions/ByRole/{roleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.RolePermission, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PermissionsController",
+    "Method": "FilterPermissions",
+    "RelativePath": "api/Permissions/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filt",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Permission, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PermissionsController",
+    "Method": "InsertPermission",
+    "RelativePath": "api/Permissions/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.Permission_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PermissionsController",
+    "Method": "ListPermissions",
+    "RelativePath": "api/Permissions/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Permission, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PermissionsController",
+    "Method": "RevokePermissionFromRole",
+    "RelativePath": "api/Permissions/Revoke",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "revokeDto",
+        "Type": "Application.DTOs.RolePermission_Revoke_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductIdentificatorsController",
+    "Method": "DeleteProductIdentificator",
+    "RelativePath": "api/ProductIdentificators/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.ProductIdentificator_DTOs\u002BProductIdentificator_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductIdentificatorsController",
+    "Method": "FilterProductIdentificators",
+    "RelativePath": "api/ProductIdentificators/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.ProductIdentificator, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductIdentificatorsController",
+    "Method": "InsertProductIdentificator",
+    "RelativePath": "api/ProductIdentificators/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.ProductIdentificator_DTOs\u002BProductIdentificator_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductIdentificatorsController",
+    "Method": "ListProductIdentificators",
+    "RelativePath": "api/ProductIdentificators/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.ProductIdentificator, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductIdentificatorsController",
+    "Method": "UpdateProductIdentificator",
+    "RelativePath": "api/ProductIdentificators/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.ProductIdentificator_DTOs\u002BProductIdentificator_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductImagesController",
+    "Method": "DeleteProductImage",
+    "RelativePath": "api/ProductImages/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.ProductImage_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductImagesController",
+    "Method": "FilterProductImages",
+    "RelativePath": "api/ProductImages/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.ProductImage, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductImagesController",
+    "Method": "InsertProductImage",
+    "RelativePath": "api/ProductImages/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.ProductImage_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductImagesController",
+    "Method": "ListProductImages",
+    "RelativePath": "api/ProductImages/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.ProductImage, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductImagesController",
+    "Method": "UpdateProductImage",
+    "RelativePath": "api/ProductImages/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.ProductImage_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductsController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/Products/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.Product_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductsController",
+    "Method": "FilterProducts",
+    "RelativePath": "api/Products/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductsController",
+    "Method": "InsertProduct",
+    "RelativePath": "api/Products/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.Product_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductsController",
+    "Method": "ListProducts",
+    "RelativePath": "api/Products/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductsController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/Products/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.Product_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariablesController",
+    "Method": "DeleteProductVariable",
+    "RelativePath": "api/ProductVariables/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.ProductVariable_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariablesController",
+    "Method": "FilterProductVariables",
+    "RelativePath": "api/ProductVariables/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.ProductVariable, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariablesController",
+    "Method": "InsertProductVariable",
+    "RelativePath": "api/ProductVariables/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.ProductVariable_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariablesController",
+    "Method": "ListProductVariables",
+    "RelativePath": "api/ProductVariables/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.ProductVariable, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariablesController",
+    "Method": "UpdateProductVariable",
+    "RelativePath": "api/ProductVariables/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.ProductVariable_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariableTypesController",
+    "Method": "DeleteProductVariableType",
+    "RelativePath": "api/ProductVariableTypes/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.ProductVariableType_DTOs\u002BProductVariableType_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariableTypesController",
+    "Method": "FilterProductVariableTypes",
+    "RelativePath": "api/ProductVariableTypes/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.ProductVariableType, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariableTypesController",
+    "Method": "InsertProductVariableType",
+    "RelativePath": "api/ProductVariableTypes/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.ProductVariableType_DTOs\u002BProductVariableType_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariableTypesController",
+    "Method": "ListProductVariableTypes",
+    "RelativePath": "api/ProductVariableTypes/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.ProductVariableType, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProductVariableTypesController",
+    "Method": "UpdateProductVariableType",
+    "RelativePath": "api/ProductVariableTypes/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.ProductVariableType_DTOs\u002BProductVariableType_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProvidersController",
+    "Method": "DeleteProvider",
+    "RelativePath": "api/Providers/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteProvider",
+        "Type": "Application.DTOs.Provider_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProvidersController",
+    "Method": "FilterProviders",
+    "RelativePath": "api/Providers/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Provider, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProvidersController",
+    "Method": "InsertProvider",
+    "RelativePath": "api/Providers/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createProvider",
+        "Type": "Application.DTOs.Provider_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProvidersController",
+    "Method": "ListProviders",
+    "RelativePath": "api/Providers/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Provider, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ProvidersController",
+    "Method": "UpdateProvider",
+    "RelativePath": "api/Providers/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateProvider",
+        "Type": "Application.DTOs.Provider_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolePermissionMatrixController",
+    "Method": "DeleteRolePermission",
+    "RelativePath": "api/RolePermissionMatrix/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.RolePermissionMatrix_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolePermissionMatrixController",
+    "Method": "FilterRolePermissions",
+    "RelativePath": "api/RolePermissionMatrix/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filt",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.RolePermissionMatrix, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolePermissionMatrixController",
+    "Method": "InsertRolePermission",
+    "RelativePath": "api/RolePermissionMatrix/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.RolePermissionMatrix_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolePermissionMatrixController",
+    "Method": "ListRolePermissions",
+    "RelativePath": "api/RolePermissionMatrix/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.RolePermissionMatrix, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolePermissionMatrixController",
+    "Method": "UpdateRolePermission",
+    "RelativePath": "api/RolePermissionMatrix/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.RolePermissionMatrix_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolesController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/Roles/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.Role_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolesController",
+    "Method": "FilterRoles",
+    "RelativePath": "api/Roles/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filt",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Role, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolesController",
+    "Method": "InsertRole",
+    "RelativePath": "api/Roles/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.Role_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolesController",
+    "Method": "ListRoles",
+    "RelativePath": "api/Roles/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Role, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.RolesController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/Roles/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.Role_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SegmentsController",
+    "Method": "DeleteSegment",
+    "RelativePath": "api/Segments/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteSegment",
+        "Type": "Application.DTOs.Segment_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SegmentsController",
+    "Method": "FilterSegments",
+    "RelativePath": "api/Segments/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Segment, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SegmentsController",
+    "Method": "InsertSegment",
+    "RelativePath": "api/Segments/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createSegment",
+        "Type": "Application.DTOs.Segment_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SegmentsController",
+    "Method": "ListSegments",
+    "RelativePath": "api/Segments/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Segment, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SegmentsController",
+    "Method": "UpdateSegment",
+    "RelativePath": "api/Segments/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateSegment",
+        "Type": "Application.DTOs.Segment_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementDetailsController",
+    "Method": "DeleteStockMovementDetail",
+    "RelativePath": "api/StockMovementDetails/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.StockMovementDetail_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementDetailsController",
+    "Method": "FilterStockMovementDetails",
+    "RelativePath": "api/StockMovementDetails/Filter/{filt}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filt",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.StockMovementDetail, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementDetailsController",
+    "Method": "InsertStockMovementDetail",
+    "RelativePath": "api/StockMovementDetails/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.StockMovementDetail_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementDetailsController",
+    "Method": "ListStockMovementDetails",
+    "RelativePath": "api/StockMovementDetails/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movementId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "stockId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.StockMovementDetail, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementDetailsController",
+    "Method": "UpdateStockMovementDetail",
+    "RelativePath": "api/StockMovementDetails/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.StockMovementDetail_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementsController",
+    "Method": "DeleteStockMovement",
+    "RelativePath": "api/StockMovements/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.StockMovement_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementsController",
+    "Method": "FilterStockMovements",
+    "RelativePath": "api/StockMovements/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filt",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.StockMovement, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementsController",
+    "Method": "InsertStockMovement",
+    "RelativePath": "api/StockMovements/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.StockMovement_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementsController",
+    "Method": "ListStockMovements",
+    "RelativePath": "api/StockMovements/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "orderId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.StockMovement, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementsController",
+    "Method": "UpdateStockMovement",
+    "RelativePath": "api/StockMovements/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.StockMovement_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementTypesController",
+    "Method": "DeleteStockMovementType",
+    "RelativePath": "api/StockMovementTypes/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.StockMovementType_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementTypesController",
+    "Method": "FilterStockMovementTypes",
+    "RelativePath": "api/StockMovementTypes/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filt",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.StockMovementType, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementTypesController",
+    "Method": "InsertStockMovementType",
+    "RelativePath": "api/StockMovementTypes/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.StockMovementType_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementTypesController",
+    "Method": "ListStockMovementTypes",
+    "RelativePath": "api/StockMovementTypes/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.StockMovementType, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StockMovementTypesController",
+    "Method": "UpdateStockMovementType",
+    "RelativePath": "api/StockMovementTypes/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.StockMovementType_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StocksController",
+    "Method": "DeleteStock",
+    "RelativePath": "api/Stocks/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.Stock_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StocksController",
+    "Method": "FilterStocks",
+    "RelativePath": "api/Stocks/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Stock, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StocksController",
+    "Method": "InsertStock",
+    "RelativePath": "api/Stocks/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.Stock_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StocksController",
+    "Method": "ListStocks",
+    "RelativePath": "api/Stocks/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.Stock, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StocksController",
+    "Method": "UpdateStock",
+    "RelativePath": "api/Stocks/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.Stock_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubCategoriesController",
+    "Method": "DeleteSubCategory",
+    "RelativePath": "api/SubCategories/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteSubCategory",
+        "Type": "Application.DTOs.Sub_CategoryDTO\u002BSubCategory_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubCategoriesController",
+    "Method": "FilterSubCategories",
+    "RelativePath": "api/SubCategories/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.SubCategory, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubCategoriesController",
+    "Method": "InsertSubCategory",
+    "RelativePath": "api/SubCategories/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createSubCategory",
+        "Type": "Application.DTOs.Sub_CategoryDTO\u002BSubCategory_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubCategoriesController",
+    "Method": "ListSubCategories",
+    "RelativePath": "api/SubCategories/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.SubCategory, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubCategoriesController",
+    "Method": "UpdateSubCategory",
+    "RelativePath": "api/SubCategories/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateSubCategory",
+        "Type": "Application.DTOs.Sub_CategoryDTO\u002BSubCategory_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_Ecommerce_App.Controllers.Tbl_StatusController",
+    "Method": "Update_Status",
+    "RelativePath": "api/Tbl_Status/Editar_Estado",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "update",
+        "Type": "Application.DTOs.Tbl_Update_Status",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_Ecommerce_App.Controllers.Tbl_StatusController",
+    "Method": "Delete_status",
+    "RelativePath": "api/Tbl_Status/Eliminar_Estado",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "delete",
+        "Type": "Application.DTOs.Tbl_Delete_Status",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_Ecommerce_App.Controllers.Tbl_StatusController",
+    "Method": "Filt_list_Status",
+    "RelativePath": "api/Tbl_Status/Filtrar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_Ecommerce_App.Controllers.Tbl_StatusController",
+    "Method": "Insert_Status",
+    "RelativePath": "api/Tbl_Status/Insertar_Estado",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "create",
+        "Type": "Application.DTOs.Tbl_Create_Status",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_Ecommerce_App.Controllers.Tbl_StatusController",
+    "Method": "List_Status",
+    "RelativePath": "api/Tbl_Status/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserAddressesController",
+    "Method": "DeleteUserAddress",
+    "RelativePath": "api/UserAddresses/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteUserAddress",
+        "Type": "Application.DTOs.Tbl_UserAddress_Delete_DTOs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserAddressesController",
+    "Method": "FilterUserAddresses",
+    "RelativePath": "api/UserAddresses/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "criterio",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserAddressesController",
+    "Method": "InsertUserAddress",
+    "RelativePath": "api/UserAddresses/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUserAddress",
+        "Type": "Application.DTOs.Tbl_UserAddress_Insert_DTOs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserAddressesController",
+    "Method": "ListUserAddresses",
+    "RelativePath": "api/UserAddresses/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserAddressesController",
+    "Method": "UpdateUserAddress",
+    "RelativePath": "api/UserAddresses/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUserAddress",
+        "Type": "Application.DTOs.Tbl_UserAddress_Update_DTOs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserPaymentMethodsController",
+    "Method": "DeleteUserPaymentMethod",
+    "RelativePath": "api/UserPaymentMethods/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.UserPaymentMethod_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserPaymentMethodsController",
+    "Method": "FilterUserPaymentMethod",
+    "RelativePath": "api/UserPaymentMethods/Filter/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Domain.UserPaymentMethod",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserPaymentMethodsController",
+    "Method": "InsertUserPaymentMethod",
+    "RelativePath": "api/UserPaymentMethods/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.UserPaymentMethod_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserPaymentMethodsController",
+    "Method": "ListUserPaymentMethods",
+    "RelativePath": "api/UserPaymentMethods/List/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.UserPaymentMethod, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserPaymentMethodsController",
+    "Method": "UpdateUserPaymentMethod",
+    "RelativePath": "api/UserPaymentMethods/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.UserPaymentMethod_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserRolesController",
+    "Method": "DeleteUserRole",
+    "RelativePath": "api/UserRoles/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDto",
+        "Type": "Application.DTOs.UserRole_Delete_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserRolesController",
+    "Method": "FilterUserRoles",
+    "RelativePath": "api/UserRoles/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filt",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.UserRole, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserRolesController",
+    "Method": "InsertUserRole",
+    "RelativePath": "api/UserRoles/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Application.DTOs.UserRole_Insert_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserRolesController",
+    "Method": "ListUserRoles",
+    "RelativePath": "api/UserRoles/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Domain.UserRole, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserRolesController",
+    "Method": "UpdateUserRole",
+    "RelativePath": "api/UserRoles/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Application.DTOs.UserRole_Update_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_Ecommerce_App.Controllers.UserRolesManagementController",
+    "Method": "AssignRoleGlobal",
+    "RelativePath": "api/UserRolesManagement/assign-role-global",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.SuperAdminRoleAssignmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UsersController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Users/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteUser",
+        "Type": "Application.DTOs.Tbl_User_Delete_DTOs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UsersController",
+    "Method": "FilterUsers",
+    "RelativePath": "api/Users/Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "criterio",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UsersController",
+    "Method": "InsertUser",
+    "RelativePath": "api/Users/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUser",
+        "Type": "Application.DTOs.Tbl_User_Insert_DTOs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UsersController",
+    "Method": "ListUsers",
+    "RelativePath": "api/Users/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UsersController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/Users/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUser",
+        "Type": "Application.DTOs.Tbl_User_Update_DTOs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
