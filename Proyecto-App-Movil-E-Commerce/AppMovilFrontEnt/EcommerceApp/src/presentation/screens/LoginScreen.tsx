@@ -36,7 +36,7 @@ export const LoginScreen = () => {
         console.log('Login simulado con éxito');
         
         // CORRECCIÓN: Ruta exacta sin paréntesis vinculada a tu products.tsx
-        router.replace('/products'); 
+        router.replace('/home'); 
       } else {
         // Mensaje de error detallado por si hay fallas en la escritura
         Alert.alert(

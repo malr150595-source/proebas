@@ -2,6 +2,9 @@ import React from 'react';
 import { View, Text, Image, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import { BottomTabNavigator } from '../components/BottomTabNavigator';
+import { ChatbotButton } from '../components/ChatbotButton';
+
 
 const { width } = Dimensions.get('window');
 
@@ -27,7 +30,6 @@ const PRODUCTS = [
 
 export const HomeScreen = () => {
   return (
-    // Agregamos un View contenedor con estilo plano para que NativeWind pinte el fondo correctamente
     <View className="flex-1 bg-[#0b1221]">
       <SafeAreaView className="flex-1" edges={['top', 'left', 'right']}>
         
@@ -50,7 +52,7 @@ export const HomeScreen = () => {
           </Text>
 
           {/* LISTADO DE PRODUCTOS */}
-          <View className="space-y-6 pb-32">
+          <View className="space-y-6 pb-24">
             {PRODUCTS.map((product) => (
               <View 
                 key={product.id} 
@@ -60,7 +62,7 @@ export const HomeScreen = () => {
                 <View className="h-64 w-full relative bg-black/10">
                   <Image 
                     source={{ uri: product.image }} 
-                    resizeMode="cover" // CORRECCIÓN: Se pasa como prop nativa, no en el className
+                    resizeMode="cover"
                     className="w-full h-full"
                   />
                 </View>
@@ -97,38 +99,11 @@ export const HomeScreen = () => {
 
         </ScrollView>
 
-        {/* BOTÓN FLOTANTE DEL BOT / ASISTENTE */}
-        <TouchableOpacity 
-          activeOpacity={0.8}
-          className="absolute bottom-24 right-6 bg-[#2CB1F6] w-14 h-14 rounded-full justify-center items-center shadow-lg shadow-[#2CB1F6]/50 z-50"
-        >
-          <Ionicons name="hardware-chip" size={26} color="#0b1221" />
-        </TouchableOpacity>
+        {/* BOTON DEL CHATBOT */}
+        <ChatbotButton/>
 
-        {/* TABS DE NAVEGACIÓN INFERIOR (Simuladas en el componente por ahora) */}
-        <View className="absolute bottom-0 left-0 right-0 h-20 bg-[#0e1726] border-t border-[#1d293e] flex-row justify-around items-center px-4 z-50">
-          
-          <TouchableOpacity className="items-center justify-center">
-            <Ionicons name="shirt-outline" size={24} color="#2CB1F6" />
-            <Text className="text-[#2CB1F6] text-xs mt-1 font-medium">Inicio</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity className="items-center justify-center">
-            <Ionicons name="cart-outline" size={24} color="#586e85" />
-            <Text className="text-[#586e85] text-xs mt-1 font-medium">Carrito</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity className="items-center justify-center">
-            <Ionicons name="cube-outline" size={24} color="#586e85" />
-            <Text className="text-[#586e85] text-xs mt-1 font-medium">Compras</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity className="items-center justify-center">
-            <Ionicons name="person-outline" size={24} color="#586e85" />
-            <Text className="text-[#586e85] text-xs mt-1 font-medium">Perfil</Text>
-          </TouchableOpacity>
-
-        </View>
+        {/* TABS DE NAVEGACIÓN INFERIOR COMPONENTIZADAS */}
+        <BottomTabNavigator />
 
       </SafeAreaView>
     </View>
